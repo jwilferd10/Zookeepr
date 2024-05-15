@@ -1,0 +1,24 @@
+{
+  "name": "zookepr-relearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwilferd10/zookeepr-revisit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwilferd10/zookeepr-revisit/issues"
+  },
+  "homepage": "https://github.com/jwilferd10/zookeepr-revisit#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
