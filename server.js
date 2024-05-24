@@ -54,6 +54,11 @@ const filterByQuery = (query, animalsArray) => {
     return filteredResults;
 } 
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Zookeepr API! Navigate to /api/animals to see the animal data.');
+})
+
+
 app.get('/api/animals', (req, res) => {
     // result will contain animals JSON data
     let results = animals;
