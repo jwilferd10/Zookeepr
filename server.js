@@ -54,10 +54,14 @@ const filterByQuery = (query, animalsArray) => {
     return filteredResults;
 } 
 
+const findById = (id, animalsArray) => {
+    const result = animalsArray.filter(animal => animal.id === id)[0];
+    return result;
+}
+
 app.get('/', (req, res) => {
     res.send('Welcome to the Zookeepr API! Navigate to /api/animals to see the animal data.');
 })
-
 
 app.get('/api/animals', (req, res) => {
     // result will contain animals JSON data
@@ -69,8 +73,12 @@ app.get('/api/animals', (req, res) => {
     }
 
     res.json(results);
-    
 });
+
+app.get('/api/animals/:id', (req, res) => {
+    const result = findById(req.params.id, animals);
+    res.json(result);
+})
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}`);
