@@ -1,4 +1,4 @@
-// Left off at 11.3.1
+// Left off at 11.3.5
 const { animals } = require('./data/animals');
 const express = require('express');
 const PORT = process.env.PORT || 3001
@@ -11,6 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // parse incoming JSON data
 app.use(express.json());
+
+app.use(express.static('public'));
 
 const filterByQuery = (query, animalsArray) => {
 
@@ -99,10 +101,6 @@ const validateAnimal = (animal) => {
     return true;
 }
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the Zookeepr API! Navigate to /api/animals to see the animal data.');
-})
-
 app.get('/api/animals', (req, res) => {
     // result will contain animals JSON data
     let results = animals;
@@ -136,6 +134,10 @@ app.post('/api/animals', (req, res) => {
         const animal = createNewAnimal(req.body, animals);
         res.json(animal);
     }
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.listen(PORT, () => {
