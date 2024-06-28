@@ -1,4 +1,7 @@
-app.get('/api/animals', (req, res) => {
+const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals')
+const { animals } = require('../../data/animals.json');
+
+app.get('/animals', (req, res) => {
     // result will contain animals JSON data
     let results = animals;
 
@@ -10,7 +13,7 @@ app.get('/api/animals', (req, res) => {
     res.json(results);
 });
 
-app.get('/api/animals/:id', (req, res) => {
+app.get('/animals/:id', (req, res) => {
     const result = findById(req.params.id, animals);
     if (result) {
         res.json(result);
@@ -19,7 +22,7 @@ app.get('/api/animals/:id', (req, res) => {
     }
 });
 
-app.post('/api/animals', (req, res) => {
+app.post('/animals', (req, res) => {
     // set id based on what the next index of the array will be
     req.body.id = animals.length.toString();
 
