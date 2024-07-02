@@ -8,7 +8,7 @@ const {
     validateAnimal
 } = require('../lib/animals');
 const { animals } = require('../data/animals.json');
-const { start } = require('repl');
+// const { start } = require('repl');
 
 test('Create an animal object', () => {
     const animal = createNewAnimal(
