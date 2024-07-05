@@ -1,5 +1,6 @@
 const $displayArea = document.querySelector('#display-area');
 
+
 const printResults = resultArr => {
   console.log(resultArr);
 
@@ -18,6 +19,24 @@ const printResults = resultArr => {
   });
 
   $displayArea.innerHTML = animalHTML.join('');
+};
+
+const handleGetZookeepersSubmit = event => {
+  event.preventDefault(); 
+
+  // Collect the value of the name input and store it
+  const nameHTML = $zookeeperForm.querySelector('[name="name"]');
+  const name = nameHTML.value;
+
+  // Collect the value of the age input and store it
+  const ageHTML = $zookeeperForm.querySelector('[name="age"]');
+  const age = ageHTML.value;
+
+  // Pass both saved inputs into new object
+  const zookeeperObj = { name, age };
+  
+  // Sends results to getZookeepers
+  getZookeepers(zookeeperObj);
 };
 
 const getZookeepers = () => {
