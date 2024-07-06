@@ -1,5 +1,3 @@
-// Left off at 11.4.6
-
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 const express = require('express');
@@ -18,5 +16,5 @@ app.use('/', htmlRoutes);
 app.use(express.static('public'));
 
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}`);
+    console.log(`API server now on port http://localhost:${PORT}`);
 });
