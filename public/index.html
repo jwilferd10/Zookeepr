@@ -11,11 +11,15 @@
 </head>
 
 <body>
+  <!-- Page Header -->
   <header class="py-3 mb-3">
+    <!-- Projecet Description -->
     <div class="flex-row justify-space-between align-center container-fluid mx-auto">
       <h1 class="text-light bg-dark p-3">Zoo Keepr</h1>
       <h3 class="text-light bg-dark p-3">A Zoo Animal Catalog</h3>
     </div>
+
+    <!-- Introduction Text -->
     <div class="container-fluid mx-auto">
       <section class="p-3 my-4 bg-dark ">
         <h2 class="text-light">Your guide to the wild.</h2>
@@ -26,9 +30,10 @@
   </header>
 
   <main class="container-fluid mx-auto">
-
+    <!-- Page Description & Navigation -->
     <section class="p-3 mb-3 bg-dark flex-row align-center">
       <h2 class="text-light col-12 col-lg-5">Add To Our Catalog.</h2>
+      <!-- Redirection to the other two html files -->
       <div class="col-12 col-lg-7 flex-row text-center justify-space-around align-center">
         <a class="btn col-12 col-md-auto mx-2" href="/animals">View Animals</a>
         <a class="btn col-12 col-md-auto mx-2" href="/zookeepers">View Zookeepers</a>
@@ -36,15 +41,19 @@
     </section>
 
     <section class="my-4 flex-row justify-space-between ">
+      <!-- Create an Animal -->
       <div class="col-12 col-lg-6 bg-dark p-3 mb-3">
         <h3 class="text-light">Enter an Animal</h3>
         <form id="animal-form">
+          <!-- Animal Name -->
           <label for="animal-name" class="form-label">Animal Name</label>
           <input type="text" id="animal-name" name="animal-name" class="form-input" placeholder="Enter Name">
 
+          <!-- Animal Species -->
           <label for="species-input" class="form-label">Species</label>
           <input type="text" id="species-input" name="species" class="form-input" placeholder="Enter Species">
 
+          <!-- Radio Input for Diet -->
           <label for="diet-input" class="form-label">Diet</label>
           <div class="flex-row justify-center">
             <div class="col-auto mb-2">
@@ -69,9 +78,12 @@
             </div>
           </div>
 
+          <!-- Personality trait selection (Multiple Selection) -->
           <label for="personality-input" class="form-label">Personality Traits (pick all that apply)</label>
+          <!-- Instructions for including multiple -->
           <small>On macOS, use <kbd>command + click</kbd></small> <br />
           <small>On Windows, use <kdb>ctrl + click</kdb></small>
+          <!-- Personality selection list -->
           <select multiple id="personality-input" class="form-input" name="personality">
             <option value="hungry">Hungry</option>
             <option value="zany">Zany</option>
@@ -80,34 +92,34 @@
             <option value="goofy">Goofy</option>
           </select>
 
+          <!-- Submit Button -->
           <button class="btn">Add Animal</button>
         </form>
       </div>
 
+      <!-- Create a Zookeeper -->
       <div class="col-12 col-lg-6 bg-dark p-3 mb-3">
         <h3 class="text-light">Enter a Zookeeper</h3>
         <form id="zookeeper-form">
+          <!-- Enter Name -->
           <label for="zookeeper-name" class="form-label">Zookeeper Name</label>
-          <input type="text" id="zookeeper-name" class="form-input input" placeholder="Enter Name"
-            name="zookeeper-name">
-
+          <input type="text" id="zookeeper-name" class="form-input input" placeholder="Enter Name" name="zookeeper-name">
+          
+          <!-- Enter age -->
           <label for="age-input" class="form-label input">Age</label>
           <input type="number" id="age-input" class="form-input" placeholder="Enter Age" name="age">
 
+          <!-- Enter Animal -->
           <label for="favorite-animal" class="form-label">Favorite Animal</label>
-          <input type="text" class="form-input input" id="favorite-animal" placeholder="Enter Favorite Animal"
-            name="favorite-animal">
+          <input type="text" class="form-input input" id="favorite-animal" placeholder="Enter Favorite Animal" name="favorite-animal">
 
+          <!-- Submit Button -->
           <button class="btn">Add Zookeeper</button>
         </form>
       </div>
-
     </section>
-
-
   </main>
 
   <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
