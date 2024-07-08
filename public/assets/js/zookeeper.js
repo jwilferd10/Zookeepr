@@ -1,3 +1,8 @@
+// This file is responsible for the zookeepers.html search
+// It will query the /api/zookeepers and fetch appropriate responses
+// Automatically features all zookeepers in the API, handles specified searches
+// Prints out the card onto the html
+
 const $displayArea = document.querySelector('#display-area');
 const $zookeeperForm = document.querySelector('#zookeeper-form');
 
