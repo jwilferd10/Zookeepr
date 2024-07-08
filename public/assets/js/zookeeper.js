@@ -1,9 +1,11 @@
 const $displayArea = document.querySelector('#display-area');
 const $zookeeperForm = document.querySelector('#zookeeper-form');
 
+// The html template for the zookeeper card
 const printResults = resultArr => {
   console.log(resultArr);
 
+  // Map through the array and collect specified parameters, pass it onto html template
   const animalHTML = resultArr.map(({ id, name, age, favoriteAnimal }) => {
     return `
   <div class="col-12 col-md-5 mb-3">
@@ -18,6 +20,7 @@ const printResults = resultArr => {
     `;
   });
 
+  // Add the card onto the displayArea's inner html content
   $displayArea.innerHTML = animalHTML.join('');
 };
 
@@ -39,21 +42,27 @@ const handleGetZookeepersSubmit = event => {
   getZookeepers(zookeeperObj);
 };
 
+// Accepts formData (an object) and processes the data contained within it
 const getZookeepers = (formData = {}) => {
+  // Forms the api query url
   let queryUrl = '/api/zookeepers?';
  
+  // Collect the formData object's key/value pair and chains it to the end of queryUrl
   Object.entries(formData).forEach(([key, value]) => {
     queryUrl += `${key}=${value}&`;
   });
 
+  // Fetch the specified request
   fetch(queryUrl)
     .then(response => {
+      // Handle for any errors
       if (!response.ok) {
         return alert(`Error: ${response.statusText}`);
       }
       return response.json();
     })
     .then(zookeeperArr => {
+      // Prints the html template
       console.log(zookeeperArr);
       printResults(zookeeperArr);
     });
