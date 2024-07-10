@@ -34,16 +34,15 @@ const handleAnimalFormSubmit = event => {
   // Multiple options can be selected
   const selectedTraits = $animalForm.querySelector('[name="personality"').selectedOptions;
   
-  // Set personalityTraits to an empty array, to potentially hold multiple options
+  // Array to hold multiple selected personality traits
   const personalityTraits = [];
 
   // Loop through each selected traits
   for (let i = 0; i < selectedTraits.length; i += 1) {
-    // Push the value of the selected traits into the array
-    personalityTraits.push(selectedTraits[i].value);
+    personalityTraits.push(selectedTraits[i].value); // Push trait value to array
   }
 
-  // Create the animal object
+  // Create the animal object with collected data
   const animalObject = { name, species, diet, personalityTraits };
 
   // Post the newly created animal object to api/animals
@@ -62,9 +61,8 @@ const handleAnimalFormSubmit = event => {
     alert('Error; ' + response.statusText);
   })
   .then(postResponse => {
-  // Successful response
-    console.log(postResponse);
-    alert('Thank you for adding an animal');
+    console.log(postResponse); // Log the successful response
+    alert('Thank you for adding an animal'); // Alert user of successful submission
   });
 };
 
@@ -72,16 +70,18 @@ const handleAnimalFormSubmit = event => {
 const handleZookeeperFormSubmit = event => {
   event.preventDefault();
 
-  // Get zookeeper data and organize it
+  // Collect all the user's inputs 
   const name = $zookeeperForm.querySelector('[name="zookeeper-name"]').value;
   const age = parseInt($zookeeperForm.querySelector('[name="age"]').value);
   const favoriteAnimal = $zookeeperForm.querySelector('[name="favorite-animal"]').value;
 
+  // Create a zookeeper object with collected data
   const zookeeperObj = { name, age, favoriteAnimal }
   
-  // view the created object
-  console.log(zookeeperObj)
+  // View the created zookeeper
+  // console.log(zookeeperObj)
 
+  // Post the newly created zookeeper to api/zookeepers
   fetch('/api/zookeepers', {
     method: 'POST',
     headers: {
@@ -97,8 +97,8 @@ const handleZookeeperFormSubmit = event => {
     alert('Error; ' + response.statusText)
   })
   .then(postResponse => {
-    console.log(postResponse);
-    alert('Thank you for adding a zookeeper');
+    console.log(postResponse); // Log the successful response
+    alert('Thank you for adding a zookeeper'); // Alert user of successful submission
   });
 };
 
