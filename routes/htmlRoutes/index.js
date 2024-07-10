@@ -1,5 +1,8 @@
-const router = require('express').Router();
-const path = require('path');
+import express from 'express';
+import path from 'path';
+
+// Create router instance
+const router = express.Router();
 
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/index.html'));
@@ -14,3 +17,6 @@ router.get('/zookeepers', (req, res) => {
 });
 
 module.exports = router;
+
+// export router instance's defined routes
+export default router;
