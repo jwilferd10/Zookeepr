@@ -1,5 +1,5 @@
-import { apiRoutes } from './routes/apiRoutes.js';
-import { htmlRoutes } from './routes/htmlRoutes.js';
+import apiRoutes from './routes/apiRoutes/index.js';
+import htmlRoutes from './routes/htmlRoutes/index.js';
 import express from 'express';
 const PORT = process.env.PORT || 3001
 const app = express();

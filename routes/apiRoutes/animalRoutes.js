@@ -1,6 +1,6 @@
 import express from 'express';
-import { filterByQuery, findById, createNewAnimal, validateAnimal } from ('../../lib/animals');
-import { animals } from ('../../data/animals.json');
+import { filterByQuery, findById, createNewAnimal, validateAnimal } from '../../lib/animals.js';
+import animals from '../../data/animals.json' assert { type: 'json' };
 
 // Create router instance
 const router = express.Router();
