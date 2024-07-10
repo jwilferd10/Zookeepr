@@ -1,6 +1,9 @@
-const router = require('express').Router();
-const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals')
-const { animals } = require('../../data/animals.json');
+import express from 'express';
+import { filterByQuery, findById, createNewAnimal, validateAnimal } from ('../../lib/animals');
+import { animals } from ('../../data/animals.json');
+
+// Create router instance
+const router = express.Router();
 
 router.get('/animals', (req, res) => {
     // result will contain animals JSON data
@@ -37,4 +40,5 @@ router.post('/animals', (req, res) => {
     }
 });
 
-module.exports = router;
+// export router instance's defined routes
+export default router;
