@@ -1,8 +1,12 @@
-const router = require('express').Router();
-const animalRoutes = require('../apiRoutes/animalRoutes');
-const zookeeperRoutes = require('../apiRoutes/zookeeperRoutes');
+import express from 'express';
+import animalRoutes from './animalRoutes.js';
+import zookeeperRoutes from './zookeeperRoutes.js';
+
+// Create router instance
+const router = express.Router();
 
 router.use(animalRoutes);
 router.use(zookeeperRoutes);
 
-module.exports = router;
+// export router instance's defined routes
+export default router;
