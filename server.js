@@ -17,6 +17,12 @@ app.use('/', htmlRoutes);
 // Serve static files
 app.use(express.static('public'));
 
+// Middleware to handle for errors
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Internal server error');
+})
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`API server now on port http://localhost:${PORT}`);
