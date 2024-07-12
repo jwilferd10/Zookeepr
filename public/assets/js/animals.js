@@ -40,7 +40,7 @@ const getAnimals = (formData = {}) => {
   });
 
   // Testing to see the queryUrl structure
-  // console.log(queryUrl);
+  console.log(queryUrl);
 
   // Fetch the specified request
   fetch(queryUrl)
@@ -54,7 +54,7 @@ const getAnimals = (formData = {}) => {
   .then(animalData => {
     // Prints the html template
     console.log(animalData);
-    printResults(animalData);
+    printResults(animalData.animals);
   })
 
 };
