@@ -68,7 +68,7 @@ const getZookeepers = (formData = {}) => {
     })
     .then(zookeeperArr => {
       // Prints the html template
-      console.log(zookeeperArr);
+      // console.log(zookeeperArr);
       printResults(zookeeperArr);
     });
 };

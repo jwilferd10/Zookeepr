@@ -9,14 +9,9 @@ const { zookeepers } = zookeeperData;
 const router = express.Router();
 
 router.get('/zookeepers', (req, res) => {
-    // console.log('Incoming query:', req.query);
-    // console.log('Type of zookeepers:', typeof zookeepers);
-
     // result will contain animals JSON data
     let results = zookeepers;
-
-    // console.log('Initial results:', results)
-
+    
     // If a request for the query is true, run filterByQuery to collect the query parameter of the animal
     if (req.query) {
         results = filterByQuery(req.query, results);
