@@ -1,30 +1,29 @@
 import express from 'express';
 import { filterByQuery, findById, createNewZookeeper, validateZookeeper } from '../../lib/zookeepers.js';
-import zookeepers from '../../data/zookeepers.json' assert { type: 'json' };
+import zookeeperData from '../../data/zookeepers.json' assert { type: 'json' };
+
+// Deconstruct the zookeepers array for global use
+const { zookeepers } = zookeeperData;
 
 // Create router instance
 const router = express.Router();
 
 router.get('/zookeepers', (req, res) => {
-    // Log the incoming query
-    console.log('Incoming query:', req.query);
-    
-    // Check if zookeeper is an array
-    console.log('Type of zookeepers:', typeof zookeepers);
-    
+    // console.log('Incoming query:', req.query);
+    // console.log('Type of zookeepers:', typeof zookeepers);
+
     // result will contain animals JSON data
     let results = zookeepers;
 
-    // Log the initial results 
-    console.log('Initial results:', results)
+    // console.log('Initial results:', results)
 
     // If a request for the query is true, run filterByQuery to collect the query parameter of the animal
     if (req.query) {
         results = filterByQuery(req.query, results);
     }
 
-     // Log filtered results
-     console.log('Filtering results:', results)
+    //  // Log filtered results
+    //  console.log('Filtering results:', results)
 
     res.json(results);
 });

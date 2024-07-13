@@ -8,7 +8,7 @@ const $zookeeperForm = document.querySelector('#zookeeper-form');
 
 // The html template for the zookeeper card
 const printResults = resultArr => {
-  console.log(resultArr);
+  console.log('Load the returned results:' + resultArr);
 
   // Map through the array and collect specified parameters, pass it onto html template
   const animalHTML = resultArr.map(({ id, name, age, favoriteAnimal }) => {
@@ -69,7 +69,7 @@ const getZookeepers = (formData = {}) => {
     .then(zookeeperArr => {
       // Prints the html template
       console.log(zookeeperArr);
-      printResults(zookeeperArr.zookeepers);
+      printResults(zookeeperArr);
     });
 };
 
