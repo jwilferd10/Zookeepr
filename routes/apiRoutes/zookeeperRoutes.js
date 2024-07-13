@@ -6,13 +6,25 @@ import zookeepers from '../../data/zookeepers.json' assert { type: 'json' };
 const router = express.Router();
 
 router.get('/zookeepers', (req, res) => {
+    // Log the incoming query
+    console.log('Incoming query:', req.query);
+    
+    // Check if zookeeper is an array
+    console.log('Type of zookeepers:', typeof zookeepers);
+    
     // result will contain animals JSON data
     let results = zookeepers;
+
+    // Log the initial results 
+    console.log('Initial results:', results)
 
     // If a request for the query is true, run filterByQuery to collect the query parameter of the animal
     if (req.query) {
         results = filterByQuery(req.query, results);
     }
+
+     // Log filtered results
+     console.log('Filtering results:', results)
 
     res.json(results);
 });
