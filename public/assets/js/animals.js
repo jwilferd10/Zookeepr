@@ -54,7 +54,7 @@ const getAnimals = (formData = {}) => {
   .then(animalData => {
     // Prints the html template
     console.log(animalData);
-    printResults(animalData.animals);
+    printResults(animalData);
   })
 
 };
