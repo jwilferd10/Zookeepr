@@ -11,7 +11,7 @@ const printResults = resultArr => {
   console.log('Load the returned results:' + resultArr);
 
   // Map through the array and collect specified parameters, pass it onto html template
-  const animalHTML = resultArr.map(({ id, name, age, favoriteAnimal }) => {
+  const zookeeperHTML = resultArr.map(({ id, name, age, favoriteAnimal }) => {
     return `
   <div class="col-12 col-md-5 mb-3">
     <div class="card p-3" data-id=${id}>
@@ -26,7 +26,7 @@ const printResults = resultArr => {
   });
 
   // Add the card onto the displayArea's inner html content
-  $displayArea.innerHTML = animalHTML.join('');
+  $displayArea.innerHTML = zookeeperHTML.join('');
 };
 
 const handleGetZookeepersSubmit = event => {
