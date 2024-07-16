@@ -74,7 +74,7 @@ a {
   text-decoration: none;
 }
 
-header {
+.page-header {
   background-color: var(--primary);
   background-image: url('../images/header-bg.jpg');
   background-size: cover;
