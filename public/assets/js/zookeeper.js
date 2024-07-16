@@ -13,15 +13,15 @@ const printResults = resultArr => {
   // Map through the array and collect specified parameters, pass it onto html template
   const zookeeperHTML = resultArr.map(({ id, name, age, favoriteAnimal }) => {
     return `
-  <div class="col-12 col-md-5 mb-3">
-    <div class="card p-3" data-id=${id}>
-      <h4 class="text-primary">${name}</h4>
-      <p>Age: ${age}<br/>
-      Favorite Animal: ${favoriteAnimal.substring(0, 1).toUpperCase() +
-        favoriteAnimal.substring(1)}<br/>
-      </p>
-    </div>
-  </div>
+  <article class="col-12 col-md-5 mb-3">
+    <section class="card p-3" data-id=${id}>
+      <header>
+        <h4 class="text-primary">${name}</h4>
+      </header>
+      <p> Age: ${age} </p>
+      <p> Favorite Animal: ${favoriteAnimal.substring(0, 1).toUpperCase() + favoriteAnimal.substring(1)} </p>
+    </section>
+  </article>
     `;
   });
 
