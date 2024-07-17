@@ -105,6 +105,10 @@ nav a:hover {
   color: var(--light);
 }
 
+.page-card {
+  border-radius: 1.5rem;
+}
+
 .btn {
   font-size: 1.3rem;
   text-decoration: none;
