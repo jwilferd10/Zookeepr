@@ -107,6 +107,7 @@ nav a:hover {
 
 .page-card {
   border-radius: 1.5rem;
+  box-shadow: 0.1rem 0.2rem 0.2rem black;
 }
 
 .btn {
