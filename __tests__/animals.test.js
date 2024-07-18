@@ -1,13 +1,18 @@
-const fs = require('fs');
+import fs from 'fs';
 jest.mock('fs');
 
-const {
-    filterByQuery,
-    findById,
-    createNewAnimal,
-    validateAnimal
-} = require('../lib/animals');
-const { animals } = require('../data/animals.json');
+import { filterByQuery, findById, createNewAnimal, validateAnimal } from '../lib/animals.js';
+import data from '../data/animals.json';
+
+
+const animals = data.animals
+// const {
+//     filterByQuery,
+//     findById,
+//     createNewAnimal,
+//     validateAnimal
+// } = require('../lib/animals');
+// const { animals } = require('../data/animals.json');
 // const { start } = require('repl');
 
 test('Create an animal object', () => {
