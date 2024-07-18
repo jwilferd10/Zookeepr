@@ -1,4 +1,6 @@
+import { jest } from '@jest/globals'
 import fs from 'fs';
+
 jest.mock('fs');
 
 import { filterByQuery, findById, createNewAnimal, validateAnimal } from '../lib/animals.js';
