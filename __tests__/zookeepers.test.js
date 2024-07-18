@@ -1,15 +1,13 @@
+import { jest } from '@jest/globals'
 import fs from 'fs';
+
+
 jest.mock('fs');
 
-const {
-    filterByQuery,
-    findById,
-    createNewZookeeper,
-    validateZookeeper
-} = require ('../lib/zookeepers');
+import { filterByQuery, findById, createNewZookeeper, validateZookeeper } from '../lib/zookeepers.js';
+import data from '../data/zookeepers.json';
 
-const { zookeepers } = require('../data/zookeepers.json');
-// const { start } = require('repl');
+const zookeepers = data.zookeepers
 
 test('Create a new zookeeper object', () => {
     const zookeeper = createNewZookeeper (
