@@ -31,11 +31,19 @@ So much for checking out Zookeepr. This project may be familiar to some people, 
 
 ## :floppy_disk: Resources Used
 - JavaScript
+- HTML
+- CSS
 - Node.js
+  - Used to run Jest with ES6 Import support: `node --experimental-vm-modules node_modules/jest/bin/jest.js`
 - NPM
+- ES6 Modules
+- Express (^4.19.2)
+- Jest (^29.7.0)
+  - Configured to prevent transforming ESM code to CommonJS with: `"transform": {}`
 
 ## :minidisc: Usage
 (Coming Soon)
 
 ## :paperclip: Contributors
-- jwilferd10
+- GitHub: [jwilferd10](https://github.com/jwilferd10)
+  - Email: jwilferd10@yahoo.com
