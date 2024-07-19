@@ -9,7 +9,11 @@
 - [Contact Information](#e-mail-contact-information)
 
 ## :wave: Description
-Zookeepr is a platform built to showcase various animals and their respective zookeepers at their zoo. Users can search for specific animals and zookeepers, additionally users can also create and add each type to the local API.
+### :page_with_curl: Manage and Explore Zoo Data
+Zookeepr is a platform designed to showcase various animals and their respective zookeepers at the zoo. The data for both zookeepers and animals are stored in a JSON file. Using Express.js, users can access and interact with the API. The front-end code dynamically generates cards based on the API data, providing an interactive and seamless user experience.
+
+### :heavy_plus_sign: Create and Search Zoo Records
+Users can search for specific zookeepers and animals based on set parameters.  This allows for efficient and targeted searches within the zoo's database. Additionally, users can create and add new zookeepers and animals to the local API. This feature ensures that the platform remains up-to-date with the latest information and allows for continuous expansion of the zoo's records.
 
 ### :globe_with_meridians: Open
 From the start Zookeepr was built to further learning. Because of this, the repository is open and it's my hope that someone can view this codebase and find use from it.
