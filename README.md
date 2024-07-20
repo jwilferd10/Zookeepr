@@ -16,12 +16,12 @@ Zookeepr is a platform designed to showcase various animals and their respective
 Users can search for specific zookeepers and animals based on set parameters.  This allows for efficient and targeted searches within the zoo's database. Additionally, users can create and add new zookeepers and animals to the local API. This feature ensures that the platform remains up-to-date with the latest information and allows for continuous expansion of the zoo's records.
 
 ### :globe_with_meridians: Open
-From the start Zookeepr was built to further learning. Because of this, the repository is open and it's my hope that someone can view this codebase and find use from it.
+From the start Zookeepr was built to further learning. Because of this, the repository is open and it's my hope that someone views this codebase and finds some use from it.
 
 ### 💭 Developer Notes
-Originally built in 2020, this project emphasized learning how to use Express.js and middleware to interact with both the front and back end. Since then, Zookeepr has undergone updates to facilitate further learning and hands-on practice.
+Originally constructed in 2020, this project was designed to teach the use of Express.js and middleware for seamless interaction between the front and back ends. Since then, Zookeepr has been updated to provide further learning opportunities and more hands-on practice.
 
-The challenge was to mimic a real-life scenario where Zookeepr, previously built using CommonJS, needed to be updated to use ES6 Modules. Additionally, the HTML template was updated to utilize semantic elements. 
+The objective of these updates was to replicate a real-life scenario where Zookeepr, initially built with CommonJS, needed to be modernized using ES6 modules. To align with this modernization, the HTML template has also been updated to use semantic elements.
 
 ### 🙏 Thank You!
 So much for checking out Zookeepr. This project may be familiar to some people, but I've made the effort to go further and call this application my own. Thanks again and happy coding!
@@ -34,7 +34,7 @@ So much for checking out Zookeepr. This project may be familiar to some people, 
 - HTML
 - CSS
 - Node.js
-  - Used to run Jest with ES6 Import support: `node --experimental-vm-modules node_modules/jest/bin/jest.js`
+  - This command is used to run Jest with ES6 Import support: `node --experimental-vm-modules node_modules/jest/bin/jest.js`
 - NPM
 - ES6 Modules
 - Express (^4.19.2)
@@ -42,8 +42,29 @@ So much for checking out Zookeepr. This project may be familiar to some people, 
   - Configured to prevent transforming ESM code to CommonJS with: `"transform": {}`
 
 ## :minidisc: Usage
-(Coming Soon)
+### Submitting an Animal
+- Enter the animal's name and species
+- Select the animal's diet
+- Select the personality traits of the animal (multiple choice)
+- Submit
 
+### Submitting a Zookeeper
+- Enter the zookeepers name
+- Input the zookeepers age
+- Include zookeepers favorite animal
+
+### Searching for Zookeeper
+The website should automatically populate the list with existing zookeepers
+- Query by Zookeeper Name
+- Query by Zookeeper Age
+- Search
+
+### Searching for Zookeeper
+The website should automatically populate the list with existing animals
+- Query by Animal(s) diet
+- Query by Animal(s) Personality Traits (multiple choice)
+- Search
+  
 ## :paperclip: Contributors
 - GitHub: [jwilferd10](https://github.com/jwilferd10)
   - Email: jwilferd10@yahoo.com
