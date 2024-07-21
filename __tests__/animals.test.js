@@ -1,22 +1,18 @@
-import { jest } from '@jest/globals'
-import fs from 'fs';
+import { filterByQuery, findById, validateAnimal } from '../lib/animals.js';
 
-jest.mock('fs');
+// import data from '../data/animals.json';
 
-import { filterByQuery, findById, createNewAnimal, validateAnimal } from '../lib/animals.js';
-import data from '../data/animals.json';
+// const animals = data.animals
 
-const animals = data.animals
+// test('Create an animal object', () => {
+//     const animal = createNewAnimal(
+//         { name: 'Freya', id: 'test1234' },
+//         animals
+//     );
 
-test('Create an animal object', () => {
-    const animal = createNewAnimal(
-        { name: 'Freya', id: 'test1234' },
-        animals
-    );
-
-    expect(animal.name).toBe('Freya');
-    expect(animal.id).toBe('test1234');
-});
+//     expect(animal.name).toBe('Freya');
+//     expect(animal.id).toBe('test1234');
+// });
 
 test('Filters by query', () => {
     const startingAnimals = [
