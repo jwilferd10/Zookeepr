@@ -27,7 +27,23 @@ The objective of these updates was to replicate a real-life scenario where Zooke
 So much for checking out Zookeepr. This project may be familiar to some people, but I've made the effort to go further and call this application my own. Thanks again and happy coding!
 
 ## :open_book: User Story
-(Coming Soon)
+AS A public zoo, WE WANT to webpage that displays public info SO THAT our guests have quick access viewing our Animals and Workers. 
+
+GIVEN a website that displays our public zoo info
+- WHEN I view the `Animals` and `Zookeepers` pages
+  - THEN our data should populate the respected page
+- WHEN I start to search for specific `Animals`
+  - THEN I can search for specific traits of the desired animal
+- WHEN I start a search for specific `Zookeepers`
+  - THEN I can search for the zookeeper by name or age
+
+AS A Zookeepr admin, I want to be able to add new entries to our local API SO THAT our zoo's info is up-to-date.
+
+Given a website that accepts new additions
+- WHEN I visit the landing page
+  - THEN I can add an animal/zookeeper
+- WHEN I visit the animals/zookeeper pages
+  - THEN I can view my newly created animal
 
 ## :floppy_disk: Resources Used
 - JavaScript
